@@ -1,0 +1,9 @@
+{
+  "runtime":{
+    "majorVersion":"8"
+  },
+  "command": "npm start",
+  "release": {},
+  "notes": "Webshop Portal for Soaring through the Clouds, The Sequel"
+}
+
