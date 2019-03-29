@@ -135,7 +135,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
                     name: 'Home',
                     id: 'dashboard',
                     loggedInOnly: false,
-                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'
+                    iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-home-icon-24'
                 },
                 {
                     name: 'Products',
