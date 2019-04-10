@@ -7,6 +7,7 @@ COPY . .
 # Build the appliaction. As a result this will produce web folder.
 RUN npm install
 RUN ojet build
+RUN ojet serve
  
  
 # Create another Docker image which runs Jet application
