@@ -1,4 +1,4 @@
-FROM salihozdemir/ojet-devops-live:0.1
+FROM node:10
 
 #copy the Node Reload server - exposed at port 4500
 COPY jet-on-node /tmp/jet-on-node
