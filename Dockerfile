@@ -1,10 +1,10 @@
-FROM node:lts-alpine
+FROM salihozdemir/ojet-devops-live:0.1
 
 #copy the Node Reload server - exposed at port 4500
 COPY jet-on-node /tmp/jet-on-node
 RUN cd /tmp/jet-on-node && npm install
 EXPOSE 4500
-RUN npm install -g nodemon
+#RUN npm install -g nodemon
 COPY startUpScript.sh /tmp
 COPY gitRefresh.sh /tmp
 CMD ["chmod", "+x",  "/tmp/startUpScript.sh"]
