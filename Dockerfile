@@ -14,4 +14,4 @@ RUN ojet build
 # This image is the result of the build and it is going to be stored in Docker Hub
 FROM nginx:1.10.2-alpine
 COPY --from=0 web /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 4500
