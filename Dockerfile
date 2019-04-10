@@ -5,6 +5,7 @@ FROM salihozdemir/ojetbuilder
 COPY . .
  
 # Build the appliaction. As a result this will produce web folder.
+RUN npm install
 RUN ojet build
  
  
