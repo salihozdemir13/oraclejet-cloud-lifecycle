@@ -1,5 +1,10 @@
-#npm install
-#ojet build
+#git clone https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread.git
+#cd ORCLJetToCloudSampleAppByVolthread
+
+#git pull
+npm install
+ojet build
+
 # this line produced an error on uglifying one of the files
 #ojet build  --release
 

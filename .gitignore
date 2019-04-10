@@ -1,8 +1,10 @@
-/node_modules
+**/node_modules
 /bower_components
 /web
 /themes
 /.idea
+
+/jet-on-node/public
 
 /hybrid/node_modules
 /hybrid/platforms
