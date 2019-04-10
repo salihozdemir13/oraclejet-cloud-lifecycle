@@ -3,8 +3,6 @@ FROM salihozdemir/ojetdevops:latest
 
 RUN apk add --update nodejs nodejs-npm
 
-RUN npm install -g @oracle/ojet-cli
-
 RUN apk update && apk upgrade &&  apk add --no-cache bash git openssh
 
 COPY build-app.sh .
