@@ -1,5 +1,4 @@
-#FROM python:3.6.2-alpine3.6
-FROM salihozdemir/ojetdevops:latest
+FROM node:lts-alpine
 
 #copy the Node Reload server - exposed at port 4500
 COPY jet-on-node /tmp/jet-on-node
