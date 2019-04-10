@@ -1,0 +1,83 @@
+<div class="oj-hybrid-padding">
+  <h1>Volthread - Oracle Clouds - Webshop - v1.0</h1>
+  <!-- <p>Current user:<span data-bind="text: $root.userLogin"></span></p> -->
+  <div>
+    <img src='../../css/images/maxresdefault.jpg' class='iconbtnintext' data-bind="click: enterCatalog" style="width: 100%"
+      title="" />
+  </div>
+</div>
+
+<hr>
+
+<!-- Chart Options -->
+<body class="demo-disable-bg-image">
+<div id="sampleDemo" style="" class="demo-padding demo-container">
+  <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+
+    <div id='chart-container'>
+      <oj-legend id="legend1"
+                 aria-controls="bubbleChart barChart2 areaChart pieChart funnelChart"
+                 orientation="horizontal"
+                 sections="[[legendSections]]"
+                 halign="center"
+                 valign="middle"
+                 hidden-categories="{{hiddenCategoriesValue}}"
+                 hide-and-show-behavior="on"
+                 style="width:100%; height:25px;">
+      </oj-legend>
+      <div class="oj-flex">
+        <div class="oj-flex-item oj-lg-6">
+          <oj-chart id="bubbleChart"
+                    type="bubble"
+                    series="[[bubbleSeriesValue]]"
+                    animation-on-display="auto"
+                    animation-on-data-change="auto"
+                    hidden-categories="{{hiddenCategoriesValue}}"
+                    legend.rendered="off"
+                    style="width:100%;height:225px;float:left;">
+          </oj-chart>
+        </div>
+        <div class="oj-flex-item oj-lg-6">
+          <oj-chart id="barChart2"
+                    type="bar"
+                    series="[[timeSeriesValue]]"
+                    groups="[[timeGroupsValue]]"
+                    animation-on-display="auto"
+                    animation-on-data-change="auto"
+                    hidden-categories="{{hiddenCategoriesValue}}"
+                    legend.rendered="off"
+                    style="width:100%;height:225px;float:left;">
+          </oj-chart>
+        </div>
+        <div class="oj-flex-item oj-lg-6">
+          <oj-chart id="areaChart"
+                    type="area"
+                    series="[[timeSeriesValue]]"
+                    groups="[[timeGroupsValue]]"
+                    stack="on"
+                    animation-on-display="auto"
+                    animation-on-data-change="auto"
+                    hidden-categories="{{hiddenCategoriesValue}}"
+                    legend.rendered="off"
+                    style="width:100%;height:225px;float:left;">
+          </oj-chart>
+        </div>
+        <div class="oj-flex-item oj-lg-6">
+          <oj-chart id="pieChart"
+                    type="pie"
+                    series="[[pieSeriesValue]]"
+                    animation-on-display="auto"
+                    animation-on-data-change="auto"
+                    hidden-categories="{{hiddenCategoriesValue}}"
+                    legend.rendered="off"
+                    style="width:100%;height:225px;float:left;">
+          </oj-chart>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</body>
+<!-- End Charts Options -->

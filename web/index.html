@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <title>Oracle JET Sample App By Volthread</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+
+<!-- injector:theme -->
+<link rel="stylesheet" href="css/alta/6.1.0/web/alta.css" id="css" />
+<!-- endinjector -->
+
+    <!-- This contains icon fonts used by the starter template -->
+    <link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css" />
+
+    <!-- This is where you would add any app specific styling -->
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+
+<body class="oj-web-applayout-body">
+    <!-- Template for rendering navigation items shared between nav bar and nav list -->
+    <script type="text/html" id="navTemplate">
+        <li data-bind="visible: (!$data['loggedInOnly']|| $root.userLoggedIn() =='Y')"><a href="#">
+                <span data-bind="css: $data['iconClass']"></span>
+                <!-- ko text: $data['name'] -->
+                <!--/ko-->
+            </a></li>
+    </script>
+
+    <div id="globalBody" class="oj-web-applayout-page">
+        <header role="banner" class="oj-web-applayout-header">
+            <div class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center">
+                <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
+                    <span role="img" class="oj-icon demo-oracle-icon" title="Oracle Logo" alt="Oracle Logo"></span>
+                    <h1 class="oj-sm-only-hide oj-web-applayout-header-title" title="Volthread Clouds Webshop"
+                        data-bind="text: appName"></h1>
+                </div>
+                <div class="oj-flex-bar-end">
+                    <!-- Responsive Toolbar -->
+                    <oj-toolbar>
+                        <div role="img" class="bulletlist" title="background image"></div>
+                        <img src='css/images/shopbasket.png' class='iconbtnintext'
+                            data-bind="attr:{click: enterShopbasket, title: basketTitle}" width="25px" />
+                        <oj-menu-button id="userMenu" display="[[smScreen() ? 'icons' : 'all']]" chroming="half">
+                            <span data-bind="text: userLogin"></span>
+                            <span slot="endIcon"
+                                data-bind="css: smScreen() ? 'oj-icon demo-appheader-avatar' : 'oj-component-icon oj-button-menu-dropdown-icon'"></span>
+                            <oj-menu id="menu1" slot="menu" style="display:none" on-oj-action="[[menuItemAction]]">
+                                <!--                  <oj-option id="pref" value="pref">Preferences</oj-option>-->
+                                <oj-option id="help" value="help">Help</oj-option>
+                                <oj-option id="about" value="about">About</oj-option>
+                                <oj-option disabled="[[userLoggedIn =='Y']]" id="sign" value="sign"> <span
+                                        data-bind="text: (userLoggedIn() =='Y'?'Sign Out':'Sign In/Sign Up')"></span>
+                                </oj-option>
+
+                            </oj-menu>
+                        </oj-menu-button>
+                    </oj-toolbar>
+                </div>
+            </div>
+            <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+                <oj-navigation-list data="[[navDataSource]]"
+                    data-bind="css: smScreen() ? '' : 'oj-md-condense oj-md-justify-content-flex-end'"
+                    display="[[smScreen() ? 'icons' : 'all']]" edge="top"
+                    item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('navTemplate', true)]]"
+                    selection="{{router.stateId}}">
+                </oj-navigation-list>
+            </div>
+        </header>
+
+        <div role="main" class="oj-web-applayout-max-width oj-web-applayout-content"
+            data-bind="ojModule: router.moduleConfig">
+        </div>
+
+        <footer class="oj-web-applayout-footer" role="contentinfo">
+            <div class="oj-web-applayout-footer-item oj-web-applayout-max-width">
+                <ul>
+                    <oj-bind-for-each data="[[footerLinks]]">
+                        <template>
+                            <li><a :id="[[$current.data.linkId]]" :href="[[$current.data.linkTarget]]">
+                                    <oj-bind-text value="[[$current.data.name]]"></oj-bind-text>
+                                </a></li>
+                        </template>
+                    </oj-bind-for-each>
+                </ul>
+            </div>
+            <div class="oj-web-applayout-footer-item oj-web-applayout-max-width oj-text-secondary-color oj-text-sm">
+                Copyright © 2019 Oracle and/or its affiliates All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="js/libs/require/require.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
