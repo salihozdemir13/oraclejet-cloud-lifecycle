@@ -4,7 +4,7 @@ Lifecycle from Local to Cloud with Oracle JET and Spring Boot
 
 # Prerequisites
 
-. Docker
+- Docker (version 18.09.4 in my case)
 
 # Get started
 
