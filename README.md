@@ -8,4 +8,4 @@ Lifecycle from Local to Cloud with Oracle JET and Spring Boot
 
 # Get started
 
-docker run --name ojet-devops-live -p 3020:3000 -p 4510:4500 -e GITHUB_URL=https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread -e APPLICATION_ROOT_DIRECTORY= -d salihozdemir/ojet-devops-live:0.1
+    docker run --name ojet-devops-live -p 3020:3000 -p 4510:4500 -e GITHUB_URL=https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread -e APPLICATION_ROOT_DIRECTORY= -d salihozdemir/ojet-devops-live:0.1
