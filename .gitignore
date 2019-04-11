@@ -1,13 +1,9 @@
-/bower_components
-/themes
-/.idea
-/web
-**/node_modules
-build-app.sh
-Dockerfile_ORIG
-gitRefresh.sh
-startUpScript.sh
-
+# Don't track content of these folders
+bower_components/
+themes/
+web/
+.idea/
+node_modules/
 /jet-on-node/public
 
 /hybrid/node_modules
@@ -17,6 +13,14 @@ startUpScript.sh
 !hybrid/plugins
 hybrid/plugins/*
 !hybrid/plugins/fetch.json
+
+# Compiled source #
+###################
+*.sh
+*.class
+*.dll
+*.o
+*.so
 
 .DS_Store
 Thumbs.db
