@@ -32,3 +32,5 @@ If you want to test this project, download it on your machine and follow the ste
 # Get started (with Docker)
 
     docker run --name ojet-devops-live -p 3020:3000 -p 4510:4500 -e GITHUB_URL=https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread -e APPLICATION_ROOT_DIRECTORY= -d salihozdemir/ojet-devops-live:0.1
+    
+    navigate to -> localhost:3020
