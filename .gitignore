@@ -3,6 +3,10 @@
 /.idea
 /web
 **/node_modules
+build-app.sh
+Dockerfile_ORIG
+gitRefresh.sh
+startUpScript.sh
 
 /jet-on-node/public
 
