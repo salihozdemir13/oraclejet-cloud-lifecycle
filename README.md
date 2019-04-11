@@ -5,6 +5,8 @@ Lifecycle from Local to Cloud with Oracle JET and Spring Boot
 # Prerequisites
 
 - Docker (version 18.09.4 in my case)
+- Nodejs (v10.15.3)
+- npm (v6.4.1)
 
 # Get started (standalone)
 
