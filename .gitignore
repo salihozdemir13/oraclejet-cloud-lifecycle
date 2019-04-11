@@ -1,6 +1,8 @@
 /bower_components
 /themes
 /.idea
+/web
+**/node_modules
 
 /jet-on-node/public
 
