@@ -20,6 +20,7 @@ If you want to test this project, download it on your machine and follow the ste
 
 2 - go to the directory with the cd command and restore components with
 
+    npm install (**)
     ojet restore
 
 3 - start the server with the command
