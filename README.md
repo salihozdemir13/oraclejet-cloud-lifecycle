@@ -27,7 +27,7 @@ If you want to test this project, download it on your machine and follow the ste
 
     ojet serve
 
-4 - when the project is started, you default browser is launched automatically and you can navigate in the menus of the application.
+4 - when the project is started, browser is launched automatically and you can navigate in the menus of the application.
 
 # Get started (with Docker)
 
