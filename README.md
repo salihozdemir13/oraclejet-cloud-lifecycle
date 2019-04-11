@@ -1,4 +1,4 @@
-# Oracle JET & Spring Boot in Oracle Cloud using SM CLI on Docker
+## Oracle JET & Spring Boot in Oracle Cloud using SM CLI on Docker
 
 Lifecycle from Local to Cloud with Oracle JET and Spring Boot
 
