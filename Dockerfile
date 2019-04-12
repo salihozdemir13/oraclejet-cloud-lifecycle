@@ -1,6 +1,5 @@
 FROM node:10
 
-#copy the Node Reload server - exposed at port 4500
 COPY jet-on-node /tmp/jet-on-node
 RUN cd /tmp/jet-on-node && npm install
 EXPOSE 4500
