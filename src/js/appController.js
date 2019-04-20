@@ -14,19 +14,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
                 console.log("environmentSettingsURL:" + environmentSettingsURL)
                 self.CUSTOMER_PORTAL_URL = "http://144.21.67.138:7792"
                 self.LOYALTY_PORTAL_URL = "" // Oracle Cloud URL
-                self.ORDERS_PORTAL_URL = "http://129.213.72.84/orders-ms/ui/"
-                self.PRODUCT_PORTAL_URL = "https://129.156.113.125:8085/products"
-                self.OLD_PRODUCT_PORTAL_URL = 'http://localhost:8145/'
-                self.FINANCE_PORTAL_URL = "http://129.150.114.134:8088/"
 
 
                 $.get(environmentSettingsURL, function (data) {
                     console.log(`Load was performed from ${environmentSettingsURL}. ${JSON.stringify(data)}`);
                     self.CUSTOMER_PORTAL_URL = data.CUSTOMER_PORTAL_URL || 'http://144.21.67.138:7792'
-                    self.OLD_PRODUCT_PORTAL_URL = data.OLD_PRODUCT_PORTAL_URL || 'http://localhost:8145/'
-                    self.PRODUCT_PORTAL_URL = data.PRODUCT_PORTAL_URL || "https://129.156.113.125:8085/products"
-                    self.FINANCE_PORTAL_URL = data.FINANCE_PORTAL_URL || "http://129.150.114.134:8088/"
-                    self.ORDERS_PORTAL_URL = data.ORDERS_PORTAL_URL || "http://129.213.72.84/orders-ms/ui/"
                     self.LOYALTY_PORTAL_URL = data.LOYALTY_PORTAL_URL || "" // Oracle Cloud URL
                 });
             } //loadEnvironmentSettings

@@ -1,23 +1,27 @@
-#git clone https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread.git
-#cd ORCLJetToCloudSampleAppByVolthread
+git clone https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread.git
+cd ORCLJetToCloudSampleAppByVolthread
 
-#git pull
+git pull
+wait
+
 npm install
-ojet build
+wait
 
-# this line produced an error on uglifying one of the files
 #ojet build  --release
+ojet build
+wait
 
 cp -a ./web/. ./jet-on-node/public
+wait
 
 cd jet-on-node
+wait
 
 npm install
+wait
 
-cd bin
+zip -r voltranet-portal.zip .
+wait
 
-node www
-
-#zip -r webshop.zip .
-#cd /oracle-cloud-psm-cli/webshop-portal-soaring-through-the-cloud-native-sequel/jet-on-node
-#psm accs push -n SoaringWebshopPortal -r node -s hourly -d deployment.json -p webshop.zip
+cd /oracle-cloud-psm-cli/ORCLJetToCloudSampleAppByVolthread/jet-on-node
+psm accs push -n VoltranetPortal -r node -s hourly -d deployment.json -p voltranet-portal.zip

@@ -30,11 +30,7 @@ app.get('/about', function (req, res) {
   var about = {
     "about": "about operation on soaring portal backend",
     "PORT": process.env.PORT,
-    "PRODUCT_PORTAL_URL": process.env.PRODUCT_PORTAL_URL,
     "CUSTOMER_PORTAL_URL": process.env.CUSTOMERS_PORTAL_URL,
-    "FINANCE_PORTAL_URL": process.env.FINANCE_PORTAL_URL,
-    "ORDERS_PORTAL_URL": process.env.ORDERS_PORTAL_URL,
-    "LOYALTY_PORTAL_URL": process.env.LOYALTY_PORTAL_URL,
     "APP_VERSION ": APP_VERSION
   }
   res.json(about);
@@ -43,11 +39,7 @@ app.get('/about', function (req, res) {
 app.get('/environmentSettings', function (req, res) {
   var settings = {
     "PORT": process.env.PORT,
-    "PRODUCT_PORTAL_URL": process.env.PRODUCT_PORTAL_URL,
     "CUSTOMER_PORTAL_URL": process.env.CUSTOMERS_PORTAL_URL,
-    "FINANCE_PORTAL_URL": process.env.FINANCE_PORTAL_URL,
-    "LOYALTY_PORTAL_URL": process.env.LOYALTY_PORTAL_URL,
-    "ORDERS_PORTAL_URL": process.env.ORDERS_PORTAL_URL,
     "APP_VERSION ": APP_VERSION
   }
   res.json(settings);

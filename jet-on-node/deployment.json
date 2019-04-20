@@ -1,11 +1,4 @@
 {
   "memory": "1G",
-  "instances": 1,
-  "environment": {
-    "OLD_PRODUCT_PORTAL_URL":"https://soaringwebshopproducts-a516817.apaas.us2.oraclecloud.com"
-    ,"PRODUCT_PORTAL_URL":"http://129.150.114.134:8080/products"
-    ,"CUSTOMERS_PORTAL_URL":"https://soaringwebshopcustomers-a516817.apaas.us2.oraclecloud.com/"
-    ,"ORDERS_PORTAL_URL":"https://129.213.10.247/orders-ms/ui/"
-    ,"LOYALTY_PORTAL_URL":"https://soaringwebshoployalty-a516817.apaas.us2.oraclecloud.com/"
-    ,"FINANCE_PORTAL_URL":"http://129.150.114.134:8088/"
-}}
+  "instances": 1
+}
