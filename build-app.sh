@@ -23,5 +23,5 @@ wait
 zip -r voltranet-portal.zip .
 wait
 
-cd /oracle-cloud-psm-cli/ORCLJetToCloudSampleAppByVolthread/jet-on-node
-psm accs push -n VoltranetPortal -r node -s hourly -d deployment.json -p voltranet-portal.zip
+#cd /oracle-cloud-psm-cli/ORCLJetToCloudSampleAppByVolthread/jet-on-node
+#psm accs push -n VoltranetPortal -r node -s hourly -d deployment.json -p voltranet-portal.zip
