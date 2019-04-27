@@ -10,4 +10,3 @@ COPY gitRefresh.sh /tmp
 CMD ["chmod", "+x",  "/tmp/startUpScript.sh"]
 RUN /bin/bash -c 'chmod +x /tmp/gitRefresh.sh'
 ENTRYPOINT ["sh", "/tmp/startUpScript.sh"]
-

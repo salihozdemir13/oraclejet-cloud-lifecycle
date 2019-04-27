@@ -11,7 +11,7 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
 
     # prepare the actual JET app from GitHub
     mkdir app
-    git clone $GITHUB_URL app
+    git clone https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread app
     echo "GIT repo with Oracle JET application was cloned to /tmp/app/${TARGET_DIR}"
     cd /tmp/app/$TARGET_DIR
 
