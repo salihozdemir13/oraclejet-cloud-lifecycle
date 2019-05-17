@@ -11,7 +11,7 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
 
     # prepare the actual JET app from GitHub
     mkdir app
-    git clone https://github.com/salihozdemir13/ORCLJetToCloudSampleAppByVolthread app
+    git clone https://github.com/salihozdemir13/oraclejet-cloud-lifecycle app
     echo "GIT repo with Oracle JET application was cloned to /tmp/app/${TARGET_DIR}"
     cd /tmp/app/$TARGET_DIR
 
@@ -26,17 +26,10 @@ if [ ! -e $CONTAINER_ALREADY_STARTED ]; then
 
     #start  both the reload app (in the background) and (using nodemon) the actual Node app
     cd /tmp/jet-on-node
-
-    echo "starting reload app and nodemon"
-    (echo "start reload";npm start; echo "reload app finished") &
-    cd /tmp/jet-on-node;
-    echo "starting nodemon for JET app copied to /tmp/jet-on-node/public";
-    nodemon --delay 2.5 --watch public
+    echo "starting reload app"
+    (echo "start reload";npm start; echo "reload app finished")
 else
     echo "-- Not first container startup --"
     cd /tmp/jet-on-node
-    (echo "start reload";npm start; echo "reload app finished") &
-    cd /tmp/jet-on-node;
-    echo "starting nodemon for JET app copied to /tmp/jet-on-node/public";
-    nodemon --delay 2.5 --watch public
+    (echo "start reload";npm start; echo "reload app finished")
 fi
